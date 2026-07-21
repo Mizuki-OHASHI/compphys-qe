@@ -1,0 +1,429 @@
+
+             +---------------------------------------------------+
+             |                                                   |
+             |                   WANNIER90                       |
+             |                                                   |
+             +---------------------------------------------------+
+             |                                                   |
+             |        Welcome to the Maximally-Localized         |
+             |        Generalized Wannier Functions code         |
+             |            http://www.wannier.org                 |
+             |                                                   |
+             |                                                   |
+             |  Wannier90 Developer Group:                       |
+             |    Giovanni Pizzi    (EPFL)                       |
+             |    Valerio Vitale    (Cambridge)                  |
+             |    David Vanderbilt  (Rutgers University)         |
+             |    Nicola Marzari    (EPFL)                       |
+             |    Ivo Souza         (Universidad del Pais Vasco) |
+             |    Arash A. Mostofi  (Imperial College London)    |
+             |    Jonathan R. Yates (University of Oxford)       |
+             |                                                   |
+             |  For the full list of Wannier90 3.x authors,      |
+             |  please check the code documentation and the      |
+             |  README on the GitHub page of the code            |
+             |                                                   |
+             |                                                   |
+             |  Please cite                                      |
+             |                                                   |
+             |  [ref] "Wannier90 as a community code:            |
+             |        new features and applications",            |
+             |        G. Pizzi et al., J. Phys. Cond. Matt. 32,  |
+             |        165902 (2020).                             |
+             |        http://doi.org/10.1088/1361-648X/ab51ff    |
+             |                                                   |
+             |  in any publications arising from the use of      |
+             |  this code. For the method please cite            |
+             |                                                   |
+             |  [ref] "Maximally Localized Generalised Wannier   |
+             |         Functions for Composite Energy Bands"     |
+             |         N. Marzari and D. Vanderbilt              |
+             |         Phys. Rev. B 56 12847 (1997)              |
+             |                                                   |
+             |  [ref] "Maximally Localized Wannier Functions     |
+             |         for Entangled Energy Bands"               |
+             |         I. Souza, N. Marzari and D. Vanderbilt    |
+             |         Phys. Rev. B 65 035109 (2001)             |
+             |                                                   |
+             |                                                   |
+             | Copyright (c) 1996-2020                           |
+             |        The Wannier90 Developer Group and          |
+             |        individual contributors                    |
+             |                                                   |
+             |      Release: 3.1.0        5th March    2020      |
+             |                                                   |
+             | This program is free software; you can            |
+             | redistribute it and/or modify it under the terms  |
+             | of the GNU General Public License as published by |
+             | the Free Software Foundation; either version 2 of |
+             | the License, or (at your option) any later version|
+             |                                                   |
+             | This program is distributed in the hope that it   |
+             | will be useful, but WITHOUT ANY WARRANTY; without |
+             | even the implied warranty of MERCHANTABILITY or   |
+             | FITNESS FOR A PARTICULAR PURPOSE. See the GNU     |
+             | General Public License for more details.          |
+             |                                                   |
+             | You should have received a copy of the GNU General|
+             | Public License along with this program; if not,   |
+             | write to the Free Software Foundation, Inc.,      |
+             | 675 Mass Ave, Cambridge, MA 02139, USA.           |
+             |                                                   |
+             +---------------------------------------------------+
+             |    Execution started on 22Jul2026 at 01:16:52     |
+             +---------------------------------------------------+
+ 
+ ******************************************************************************
+ * -> Using CODATA 2006 constant values                                       *
+ *    (http://physics.nist.gov/cuu/Constants/index.html)                      *
+ * -> Using Bohr value from CODATA                                            *
+ ******************************************************************************
+ 
+
+ Running in serial (with serial executable)
+
+                                    ------
+                                    SYSTEM
+                                    ------
+
+                              Lattice Vectors (Ang)
+                    a_1     1.434070   1.434070   1.434070
+                    a_2    -1.434070   1.434070   1.434070
+                    a_3    -1.434070  -1.434070   1.434070
+
+                   Unit Cell Volume:      11.79699  (Ang^3)
+
+                        Reciprocal-Space Vectors (Ang^-1)
+                    b_1     2.190683   0.000000   2.190683
+                    b_2    -2.190683   2.190683   0.000000
+                    b_3     0.000000  -2.190683   2.190683
+  
+ *----------------------------------------------------------------------------*
+ |   Site       Fractional Coordinate          Cartesian Coordinate (Ang)     |
+ +----------------------------------------------------------------------------+
+ | Fe   1   0.00000   0.00000   0.00000   |    0.00000   0.00000   0.00000    |
+ *----------------------------------------------------------------------------*
+  
+  
+ *-------------------------------- POSTW90 -----------------------------------*
+ |  Number of Wannier Functions               :                18             |
+ |  Number of electrons per state             :                 1             |
+ |  Scissor shift applied to conduction bands :             0.000             |
+ |  Number of valence bands                   :       not defined             |
+ |  Fermi energy (eV)                         :            17.461             |
+ |  Output verbosity (1=low, 5=high)          :                 1             |
+ |  Timing Level (1=low, 5=high)              :                 1             |
+ |  Optimisation (0=memory, 3=speed)          :                 3             |
+ |  Length Unit                               :               Ang             |
+ *----------------------------------------------------------------------------*
+ *------------------------ Global Smearing Parameters ------------------------*
+ |  Adaptive width smearing                   :                 T             |
+ |  Adaptive smearing factor                  :             1.414             |
+ |  Maximum allowed smearing width (eV)       :             1.000             |
+ |  Smearing Function                                             Gaussian    |
+ |  Global interpolation k-points defined     :                 F             |
+ *----------------------------------------------------------------------------*
+ *----------------------------------------------------------------------------*
+ *--------------------------------- KPATH ------------------------------------*
+ |  Plot Properties along a path in k-space   :                 T             |
+ |  Divisions along first kpath section       :               500             |
+ |  Plot energy bands                         :                 T             |
+ |  Plot Berry curvature                      :                             | FI |  Plot orbital magnetisation contribution   :                 F             |
+ |  Plot spin Hall conductivity contribution  :                 F             |
+ |  Property used to colour code the bands    :              spin             |
+ *----------------------------------------------------------------------------*
+ |   K-space path sections:                                                   |
+ |    From:  G    0.000  0.000  0.000     To:  H    0.500 -0.500 -0.500       |
+ |    From:  H    0.500 -0.500 -0.500     To:  N    0.500  0.000 -0.500       |
+ |    From:  N    0.500  0.000 -0.500     To:  G    0.000  0.000  0.000       |
+ |    From:  G    0.000  0.000  0.000     To:  P    0.750  0.250 -0.250       |
+ *----------------------------------------------------------------------------*
+ *--------------------------------- KSLICE -----------------------------------*
+ |  Plot Properties along a slice in k-space  :                 T             |
+ |  Fermi level used for slice                :            17.461             |
+ |  Divisions along first kpath section       :               500             |
+ |  Plot energy contours (fermi lines)        :                 T             |
+ |  Plot Berry curvature (sum over occ states):                 T             |
+ |  Plot orbital magnetisation contribution   :                 F             |
+ |  Plot spin Hall conductivity contribution  :                 F             |
+ |  Property used to colour code the lines    :              none             |
+ |  2D slice parameters (in reduced coordinates):                             |
+ |     Corner:      0.000   0.000   0.000                                     |
+ |    Vector1:      0.500  -0.500  -0.500            Divisions:   200         |
+ |    Vector2:      0.500   0.500   0.500            Divisions:   200         |
+ *----------------------------------------------------------------------------*
+ *--------------------------------- BERRY ------------------------------------*
+ |  Compute Berry Phase related properties    :                 T             |
+ |  Compute Optical Conductivity and JDOS     :                 F             |
+ |  Compute Anomalous Hall Conductivity       :                 T             |
+ |  Compute Shift Current                     :                 F             |
+ |  Compute Orbital Magnetisation             :                 F             |
+ |  Compute Spin Hall Conductivity            :                 F             |
+ |  Lower frequency for optical responses     :             0.000             |
+ |  Upper frequency for optical responses     :             1.429             |
+ |  Step size for optical responses           :             0.010             |
+ |  Upper eigenvalue for optical responses    :            18.890             |
+ |  Using global smearing parameters                                          |
+ |  Grid size                                 :    25 x  25 x  25             |
+ |  Adaptive refinement                       :              none             |
+ *----------------------------------------------------------------------------*
+ Time to read parameters        0.007 (sec)
+
+ *---------------------------------- K-MESH ----------------------------------*
+ +----------------------------------------------------------------------------+
+ |                    Distance to Nearest-Neighbour Shells                    |
+ |                    ------------------------------------                    |
+ |          Shell             Distance (Ang^-1)          Multiplicity         |
+ |          -----             -----------------          ------------         |
+ |             1                   0.774523                     12            |
+ |             2                   1.095341                      6            |
+ |             3                   1.341514                     24            |
+ |             4                   1.549046                     12            |
+ |             5                   1.731887                     24            |
+ |             6                   1.897187                      8            |
+ |             7               |  Plot orbital magnetisation contribution   :                 F             |
+ |  Plot spin Hall conductivity contribution  :                 F             |
+ |  Property used to colour code the bands    :              spin             |
+ *----------------------------------------------------------------------------*
+ |   K-space path sections:                                                   |
+ |    From:  G    0.000  0.000  0.000     To:  H    0.500 -0.500 -0.500       |
+ |    From:  H    0.500 -0.500 -0.500     To:  N    0.500  0.000 -0.500       |
+ |    From:  N    0.500  0.000 -0.500     To:  G    0.000  0.000  0.000       |
+ |    From:  G    0.000  0.000  0.000     To:  P    0.750  0.250 -0.250       |
+ *----------------------------------------------------------------------------*
+ *--------------------------------- KSLICE -----------------------------------*
+ |  Plot Properties along a slice in k-space  :                 T             |
+ |  Fermi level used for slice                :            17.461             |
+ |  Divisions along first kpath section       :               500             |
+ |  Plot energy contours (fermi lines)        :                 T             |
+ |  Plot Berry curvature (sum over occ states):                 T             |
+ |  Plot orbital magnetisation contribution   :                 F             |
+ |  Plot spin Hall conductivity contribution  :                 F             |
+ |  Property used to colour code the lines    :              none             |
+ |  2D slice parameters (in reduced coordinates):                             |
+ |     Corner:      0.000   0.000   0.000                                     |
+ |    Vector1:      0.500  -0.500  -0.500            Divisions:   200         |
+ |    Vector2:      0.500   0.500   0.500            Divisions:   200         |
+ *----------------------------------------------------------------------------*
+ *--------------------------------- BERRY ------------------------------------*
+ |  Compute Berry Phase related properties    :                 T             |
+ |  Compute Optical Conductivity and JDOS     :                 F             |
+ |  Compute Anomalous Hall Conductivity       :                 T             |
+ |  Compute Shift Current                     :                 F             |
+ |  Compute Orbital Magnetisation             :                 F             |
+ |  Compute Spin Hall Conductivity            :                 F             |
+ |  Lower frequency for optical responses     :             0.000             |
+ |  Upper frequency for optical responses     :             1.429             |
+ |  Step size for optical responses           :             0.010             |
+ |  Upper eigenvalue for optical responses    :            18.890             |
+ |  Using global smearing parameters                                          |
+ |  Grid size                                 :    25 x  25 x  25             |
+ |  Adaptive refinement                       :              none             |
+ *----------------------------------------------------------------------------*
+ Time to read parameters        0.008 (sec)
+
+ *---------------------------------- K-MESH ----------------------------------*
+ +----------------------------------------------------------------------------+
+ |                    Distance to Nearest-Neighbour Shells                    |
+ |                    ------------------------------------                    |
+ |          Shell             Distance (Ang^-1)          Multiplicity         |
+ |          -----             -----------------          ------------         |
+ |             1                   0.774523                     12            |
+ |             2                   1.095341                      6            |
+ |             3                   1.341514                     24            |
+ |             4                   1.549046                     12            |
+ |             5                   1.731887                     24            |
+ |             6                   1.897187                      8            |
+ |    |             9         0.547671    0.000000   -0.547671     0.416746        |
+ |            10        -0.547671    0.000000   -0.547671     0.416746        |
+ |            11        -0.547671   -0.547671    0.000000     0.416746        |
+ |            12         0.000000   -0.547671   -0.547671     0.416746        |
+ +----------------------------------------------------------------------------+
+ |                           b_k Directions (Ang^-1)                          |
+ |                           -----------------------                          |
+ |            No.           x           y           z                         |
+ |            ---        --------------------------------                     |
+ |             1         0.000000   -0.547671    0.547671                     |
+ |             2        -0.547671    0.547671    0.000000                     |
+ |             3        -0.547671    0.000000    0.547671                     |
+ |             4         0.547671    0.000000    0.547671                     |
+ |             5         0.000000    0.547671    0.547671                     |
+ |             6         0.547671    0.547671    0.000000                     |
+ +----------------------------------------------------------------------------+
+  
+ Time to get kmesh              0.019 (sec)
+ Reading restart information from file iron.chk :
+ written on 22Jul2026 at 01:16:52 ... done
+
+
+ Time to read and process       0.006 (sec)
+
+
+ Properties calculated in module  k p a t h
+ ------------------------------------------
+
+   * Energy bands in eV, coloured by spin
+
+ Reading spin matrices from iron.spn in get_SS_R : Created on 22Jul2026 at  1:16:33
+
+ Output files:
+
+   iron-path.kpt                                                                                                           
+
+   iron-bands.dat                                                                                                          
+
+   iron-bands.gnu                                                                                                          
+
+   iron-bands.py                                                                                                           
+
+
+ Properties calculated in module  k s l i c e
+ --------------------------------------------
+
+   * Fermi lines
+
+       (Fermi level:    17.4613 eV)
+
+   * Negative Berry curvature in Ang^2
+
+ Reading overlaps from iron.mmn in get_AA_R   :  Created on 22Jul2026 at  1:16:15
+
+
+ Output files:
+
+   iron-kslice-coord.dat                                                                                                   
+
+   iron-kslice-bands.dat                                                                                                   
+
+   iron-kslice-curv.dat                                                                                                    
+
+   iron-kslice-curv_x+fermi_lines.py                                                                                       
+
+   iron-kslice-curv_y+fermi_lines.py                                                                                       
+
+   iron-kslice-curv_z+fermi_lines.py                                                                                       
+  
+
+
+ Properties calculated in module  b e r r y
+ ------------------------------------------
+
+   * Anomalous Hall conductivity
+  
+ Interpolation grid: 25 25 25
+
+ Fermi energy (ev):   17.4613
+
+ AHC (S/cm)       x          y          z
+ ==========     0.0001    -0.0002  -536.2053
+
+
+ Total Execution Time         179.053 (sec)
+
+ *===========================================================================*
+ |                             TIMING INFORMATION                            |
+ *===========================================================================*
+ |    Tag                                                Ncalls      Time (s)|
+ |---------------------------------------------------------------------------|
+ |kmesh: get                                        :         1         0.019|
+ *---------------------------------------------------------------------------*
+
+
+ All done: postw90 exiting
+      |
+ |             9         0.547671    0.000000   -0.547671     0.416746        |
+ |            10        -0.547671    0.000000   -0.547671     0.416746        |
+ |            11        -0.547671   -0.547671    0.000000     0.416746        |
+ |            12         0.000000   -0.547671   -0.547671     0.416746        |
+ +----------------------------------------------------------------------------+
+ |                           b_k Directions (Ang^-1)                          |
+ |                           -----------------------                          |
+ |            No.           x           y           z                         |
+ |            ---        --------------------------------                     |
+ |             1         0.000000   -0.547671    0.547671                     |
+ |             2        -0.547671    0.547671    0.000000                     |
+ |             3        -0.547671    0.000000    0.547671                     |
+ |             4         0.547671    0.000000    0.547671                     |
+ |             5         0.000000    0.547671    0.547671                     |
+ |             6         0.547671    0.547671    0.000000                     |
+ +----------------------------------------------------------------------------+
+  
+ Time to get kmesh              0.019 (sec)
+ Reading restart information from file iron.chk :
+ written on 22Jul2026 at 01:16:52 ... done
+
+
+ Time to read and process       0.006 (sec)
+
+
+ Properties calculated in module  k p a t h
+ ------------------------------------------
+
+   * Energy bands in eV, coloured by spin
+
+ Reading spin matrices from iron.spn in get_SS_R : Created on 22Jul2026 at  1:16:33
+
+ Output files:
+
+   iron-path.kpt                                                                                                           
+
+   iron-bands.dat                                                                                                          
+
+   iron-bands.gnu                                                                                                          
+
+   iron-bands.py                                                                                                           
+
+
+ Properties calculated in module  k s l i c e
+ --------------------------------------------
+
+   * Fermi lines
+
+       (Fermi level:    17.4613 eV)
+
+   * Negative Berry curvature in Ang^2
+
+ Reading overlaps from iron.mmn in get_AA_R   :  Created on 22Jul2026 at  1:16:15
+
+
+ Output files:
+
+   iron-kslice-coord.dat                                                                                                   
+
+   iron-kslice-bands.dat                                                                                                   
+
+   iron-kslice-curv.dat                                                                                                    
+
+   iron-kslice-curv_x+fermi_lines.py                                                                                       
+
+   iron-kslice-curv_y+fermi_lines.py                                                                                       
+
+   iron-kslice-curv_z+fermi_lines.py                                                                                       
+  
+
+
+ Properties calculated in module  b e r r y
+ ------------------------------------------
+
+   * Anomalous Hall conductivity
+  
+ Interpolation grid: 25 25 25
+
+ Fermi energy (ev):   17.4613
+
+ AHC (S/cm)       x          y          z
+ ==========     0.0001    -0.0002  -536.2053
+
+
+ Total Execution Time         178.505 (sec)
+
+ *===========================================================================*
+ |                             TIMING INFORMATION                            |
+ *===========================================================================*
+ |    Tag                                                Ncalls      Time (s)|
+ |---------------------------------------------------------------------------|
+ |kmesh: get                                        :         1         0.019|
+ *---------------------------------------------------------------------------*
+
+
+ All done: postw90 exiting

@@ -1,0 +1,6 @@
+slurm_logs/*.log
+work/iron.save/
+*.amn
+*.chk
+*.mmn
+*.spn
