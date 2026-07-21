@@ -1,0 +1,11 @@
+
+&inputpp
+  outdir='./work'
+  prefix='iron',
+  seedname = 'iron'
+  spin_component = 'none'
+  write_mmn = .true.
+  write_amn = .true.
+  write_spn = .true.
+  write_unk = .false.
+/
