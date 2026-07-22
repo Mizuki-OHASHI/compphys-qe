@@ -34,6 +34,14 @@ fit log_time(x) cpu8_data \
 cpu8_fit(x) = (x >= 75 && x <= 150) ? exp(intercept)*x**slope : 1/0
 print sprintf("8 MPI processes, N_k=75--150: log-log slope = %.6f", slope)
 
+# Fit all six cpu8 points at N_k=25--150 to time = a*N_k^3 + b.
+cubic_time(x) = a*x**3 + b
+a = 6.0e-4
+b = 1.0
+fit [25:150] cubic_time(x) cpu8_data u 1:3 via a, b
+print "8 MPI processes, N_k=25--150: time = a*N_k^3 + b"
+print sprintf("a = %.10e s, b = %.6f s", a, b)
+
 plot cpu8_fit(x) w l lw 1.2 dt 2 lc rgb "red" \
          t sprintf("fit: slope=%.2f", slope), \
      cpu8_data u 1:3 w p pt 7 ps 0.65 lc rgb "red" t "8 MPI procs", \
