@@ -18,8 +18,6 @@ set border lw 1
 set key top left opaque samplen 2 spacing 0.9
 
 # wpout_to_wptsv.py extracts: N_k, AHC_z (S/cm), execution time (s).
-# The present calculation has the opposite magnetization/sign convention to
-# the positive reference values, so plot sigma_xy = -AHC_z for comparison.
 cpu8_data = "< python3 wpout_to_wptsv.py iron.wpout.cpu8"
 
 plot 1032.0 w l lw 1.2 dt 1 lc rgb "black" t "Experiment", \
