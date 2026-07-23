@@ -25,14 +25,15 @@ module load mpi/openmpi-x86_64
 
 echo "started at $(date)"
 
-mv iron.wpout iron.wpout.cpu4
+#mv iron.wpout iron.wpout.cpu4
 
-for i in {25..150..25}
-do
+#for i in {25..150..25}
+#do
+i=300
 	echo "========== $i =========="
 	sed "s/Nk/$i/g" iron.win.template > iron.win
 	time (mpirun --bind-to core --map-by core -np 8 postw90.x iron)
-done
+#done
 
 cp iron.win.backup iron.win
 echo "ended at $(date)"

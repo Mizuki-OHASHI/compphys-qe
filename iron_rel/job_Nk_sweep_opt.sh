@@ -25,7 +25,10 @@ module load mpi/openmpi-x86_64
 
 echo "started at $(date)"
 
-for i in {25..100..25}
+mv iron.wpout iron.wpout.cpu8.Nk300
+
+#for i in {25..100..25}
+for i in 150 200
 do
 	echo "========== $i =========="
 	sed "s/Nk/$i/g" iron.win.opt_template > iron.win
@@ -39,4 +42,3 @@ done
 
 cp iron.win.backup iron.win
 echo "ended at $(date)"
-
